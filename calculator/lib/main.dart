@@ -78,16 +78,32 @@ class _MainAppState extends State<MainApp> {
         if (text == "clear") {
           setState(() {
             inputvalu = "";
+            caculatedValu = "";
+            operator = ""; 
           });
         } else if (text == "+" || text == "-" || text == "*" || text == "/") {
           setState(() {
             caculatedValu = inputvalu;
             inputvalu = "";
+
+            operator = text;
           });
         } else if (text == "=") {
           setState(() {
-            inputvalu = (double.parse(inputvalu) + double.parse(caculatedValu))
-                .toString();
+            double calc = double.parse(caculatedValu);
+            double input = double.parse(inputvalu);
+
+            if (operator == "+") {
+              inputvalu = (calc + input).toString();
+            } else if (operator == "-") {
+              inputvalu = (calc - input).toString();
+            } else if (operator == "*") {
+              inputvalu = (calc * input).toString();
+            } else if (operator == "/") {
+              inputvalu = (calc / input).toString();
+            }
+
+            
           });
         } else {
           setState(() {
