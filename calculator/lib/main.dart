@@ -13,6 +13,8 @@ class MainApp extends StatefulWidget {
 
 class _MainAppState extends State<MainApp> {
   String inputvalu = "";
+  String caculatedValu = "";
+  String operator = "";
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -76,6 +78,16 @@ class _MainAppState extends State<MainApp> {
         if (text == "clear") {
           setState(() {
             inputvalu = "";
+          });
+        } else if (text == "+" || text == "-" || text == "*" || text == "/") {
+          setState(() {
+            caculatedValu = inputvalu;
+            inputvalu = "";
+          });
+        } else if (text == "=") {
+          setState(() {
+            inputvalu = (double.parse(inputvalu) + double.parse(caculatedValu))
+                .toString();
           });
         } else {
           setState(() {
