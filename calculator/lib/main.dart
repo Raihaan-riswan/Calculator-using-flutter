@@ -1,18 +1,91 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MainApp());
+  runApp(MainApp());
 }
 
 class MainApp extends StatelessWidget {
-  const MainApp({super.key});
+  MainApp({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        backgroundColor: Colors.black,
+        body: Column(
+          children: [
+            Column(
+              children: [
+                Row(
+                  children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white38,
+                        borderRadius: BorderRadius.circular(100),
+                        
+                      ),
+                      margin: EdgeInsets.only(top: 40),
+                      height: 60,
+                      width: 60,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "7",
+                        style: TextStyle(color: Colors.white,fontSize: 30,),
+                      ),
+                    ),
+
+                     Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white38,
+                        borderRadius: BorderRadius.circular(100),
+                        
+                      ),
+                      margin: EdgeInsets.only(top: 40),
+                      height: 60,
+                      width: 60,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "8",
+                        style: TextStyle(color: Colors.white,fontSize: 30,),
+                      ),
+                    ),
+
+                     Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white38,
+                        borderRadius: BorderRadius.circular(100),
+                        
+                      ),
+                      margin: EdgeInsets.only(top: 40),
+                      height: 60,
+                      width: 60,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "9",
+                        style: TextStyle(color: Colors.white,fontSize: 30,),
+                      ),
+                    ),
+
+                     Container(
+                      decoration: BoxDecoration(
+                        color: Colors.white38,
+                        borderRadius: BorderRadius.circular(100),
+                        
+                      ),
+                      margin: EdgeInsets.only(top: 40),
+                      height: 60,
+                      width: 60,
+                      alignment: Alignment.center,
+                      child: Text(
+                        "/",
+                        style: TextStyle(color: Colors.white,fontSize: 30,),
+                      ),
+                    )
+                  ],
+                )
+              ],
+            )
+          ],
         ),
       ),
     );
